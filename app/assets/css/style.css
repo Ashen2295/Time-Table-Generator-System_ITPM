@@ -1001,7 +1001,7 @@ textarea {
   width: 100%; }
 
 aside.left-panel {
-  background: #272c33;
+  background: #5e5804;
   display: table-cell;
   height: 100vh;
   min-height: 100%;
@@ -1012,7 +1012,7 @@ aside.left-panel {
   transition: width 0.3s ease; }
 
 .navbar {
-  background: #272c33;
+  background: #5e5804;
   border-radius: 0;
   border: none;
   display: block;
@@ -1076,7 +1076,7 @@ aside.left-panel {
         display: none; }
       .navbar .navbar-nav li > a {
         background: none !important;
-        color: #c8c9ce !important;
+        color: #fff !important;
         display: inline-block;
         font-family: 'Open Sans';
         font-size: 14px;
@@ -2460,3 +2460,28 @@ header .form-inline {
         .right-panel .content #bootstrap-data-table_wrapper .table td,
         .right-panel .content #bootstrap-data-table_wrapper .table th {
           padding: 5px; } }
+
+
+
+
+          /* Custom Stylesheet
+            Author:Tharindu
+          */
+          @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+          body .navbar-brand h1{
+            font-family:'Concert One',cursive;
+            font-weight: 600 !important;
+            font-size: 32px !important;
+            line-height: 16px;
+          }
+          .dashboard-sub-topic{
+            font-family: 'Concert One',cursive;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+
+          }
+          .statistics .bg-warning{
+            background:#ffa600 !important ;
+          }

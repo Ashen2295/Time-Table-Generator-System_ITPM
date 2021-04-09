@@ -11,7 +11,7 @@ let updateStatus = false;
 let idStudentToUpdate = "";
 
 function deleteStudent(id) {
-  const response = confirm("are you sure you want to delete it?");
+  const response = confirm("Do you want to delete it?");
   if (response) {
     ipcRenderer.send("delete-student", id);
   }
@@ -32,11 +32,11 @@ function renderStudents(students) {
   studentList.innerHTML = `<table class="table table-striped">
   <thead>
           <tr>
-          <th style="width:50px; display:inline-block; overflow:hidden">Year</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">Programme</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">Count</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">S-Count</th>
-          <th style="width:100px; display:inline-block; overflow:hidden"></th>
+          <th style="min-height:80px;width:150px; display:inline-block; overflow:hidden">Year & Semester</th>
+          <th style="min-height:80px;width:200px; display:inline-block; overflow:hidden">Degree Programme</th>
+          <th style="min-height:80px;width:100px; display:inline-block; overflow:hidden">Group Count</th>
+          <th style="min-height:80px;width:150px; display:inline-block; overflow:hidden">Sub-Group   Count</th>
+          <th style="min-height:80px;width:50px; display:inline-block; overflow:hidden"></th>
           </tr>
         </thead>
         </table>
@@ -46,16 +46,16 @@ function renderStudents(students) {
     studentList.innerHTML += `
     <table class="table table-striped">
     <tbody>
-      <tr>
-        <td style="width:50px; display:inline-block; overflow:hidden">${t.year}</td>
+      <tr class="w-100">
+        <td style="width:150px; display:inline-block; overflow:hidden">${t.year}</td>
         <td style="width:200px; display:inline-block; overflow:hidden">${t.programme}</td>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.group_count}</td>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.sub_group_count}</td>
-        <td style="width:250px; display:inline-block; overflow:hidden">
-        <button class="btn btn-btn btn-outline-success" onclick="editStudent('${t._id}')">
+        <td style="width:200px; display:inline-block; overflow:hidden;text-align:right">
+        <button class="btn btn-btn text-light font-weight-medium bg-success" onclick="editStudent('${t._id}')">
        Edit
     </button>
-        <button class="btn btn-btn btn-outline-danger" onclick="deleteStudent('${t._id}')">
+        <button class="btn btn-btn text-light font-weight-medium bg-danger" onclick="deleteStudent('${t._id}')">
         Delete
       </button>
     </td>
@@ -120,7 +120,7 @@ ipcRenderer.on("new-student-created", (e, arg) => {
   students.push(studentSaved);
   console.log(students);
   renderStudents(students);
-  alert("New Batch Created Successfully");
+  alert("Record added successfully");
   studentName.focus();
 });
 

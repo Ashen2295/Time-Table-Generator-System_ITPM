@@ -9,7 +9,7 @@ let updateStatus = false;
 let idMin30ToUpdate = "";
 
 function deleteMin30(id) {
-  const response = confirm("are you sure you want to delete it?");
+  const response = confirm("Do you want to delete it?");
   if (response) {
     ipcRenderer.send("delete-min30", id);
   }
@@ -43,10 +43,10 @@ function renderMin30s(min30s) {
               <td style="width:100px; display:inline-block; overflow:hidden">${t.startingHour}</td>
               <td style="width:100px; display:inline-block; overflow:hidden">${t.endingHour}</td>
               <td style="width:250px; display:inline-block; overflow:hidden">
-              <button class="btn btn-btn btn-outline-success" onclick="editMin30('${t._id}')">
+              <button class="btn btn-btn text-light font-weight-medium bg-success" onclick="editMin30('${t._id}')">
              Edit
           </button>
-              <button class="btn btn-btn btn-outline-danger" onclick="deleteMin30('${t._id}')">
+              <button class="btn btn-btn text-light font-weight-medium bg-danger" onclick="deleteMin30('${t._id}')">
               Delete
             </button>
           </td>
@@ -107,7 +107,7 @@ ipcRenderer.on("new-min30-created", (e, arg) => {
   min30s.push(min30Saved);
   console.log(min30s);
   renderMin30s(min30s);
-  alert("Time Slot Inserted Successfully");
+  alert("Record added successfully");
   startingHour.focus();
 });
 

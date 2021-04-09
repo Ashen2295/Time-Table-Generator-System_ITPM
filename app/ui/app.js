@@ -10,7 +10,7 @@ let updateStatus = false;
 let idTaskToUpdate = "";
 
 function deleteTask(id) {
-  const response = confirm("are you sure you want to delete it?");
+  const response = confirm("Do you want to delete it?");
   if (response) {
     ipcRenderer.send("delete-task", id);
   }
@@ -48,10 +48,10 @@ function renderTasks(tasks) {
         <td style="width:100px; display:inline-block; overflow:hidden">${t.description}</td>
         <td style="width:160px; display:inline-block; overflow:hidden">${t.note}</td>
         <td style="width:200px; display:inline-block; overflow:hidden">
-        <button class="btn btn-btn btn-outline-success" onclick="editTask('${t._id}')">
+        <button class="btn btn-btn text-light font-weight-medium bg-success" onclick="editTask('${t._id}')">
        Edit
       </button>
-        <button class="btn btn-btn btn-outline-danger" onclick="deleteTask('${t._id}')">
+        <button class="btn btn-btn text-light font-weight-medium bg-danger" onclick="deleteTask('${t._id}')">
         Delete
       </button>
     </td>
@@ -120,7 +120,7 @@ ipcRenderer.on("new-task-created", (e, arg) => {
   tasks.push(taskSaved);
   console.log(tasks);
   renderTasks(tasks);
-  alert("Building Created Successfully");
+  alert("Record added successfully");
   taskName.focus();
 });
 

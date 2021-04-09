@@ -9,7 +9,7 @@ let updateStatus = false;
 let idWorkingtimeToUpdate = "";
 
 function deleteWorkingtime(id) {
-  const response = confirm("are you sure you want to delete it?");
+  const response = confirm("Do you want to delete it?");
   if (response) {
     ipcRenderer.send("delete-workingtime", id);
   }
@@ -42,10 +42,10 @@ function renderWorkingtimes(workingtimes) {
       <tr>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.hour}:${t.minute}</td>
         <td style="width:200px; display:inline-block; overflow:hidden">
-        <button class="btn btn-btn btn-outline-success" onclick="editWorkingtime('${t._id}')">
+        <button class="btn btn-btn font-weight-medium text-light bg-success" onclick="editWorkingtime('${t._id}')">
        Edit
       </button>
-        <button class="btn btn-btn btn-outline-danger" onclick="deleteWorkingtime('${t._id}')">
+        <button class="btn btn-btn font-weight-medium text-light bg-danger" onclick="deleteWorkingtime('${t._id}')">
         Delete
       </button>
     </td>
@@ -101,7 +101,7 @@ ipcRenderer.on("new-workingtime-created", (e, arg) => {
   workingtimes.push(workingtimeSaved);
   console.log(workingtimes);
   renderWorkingtimes(workingtimes);
-  alert("Working Time Inserted Successfully");
+  alert("Record added successfully");
   workingtimeName.focus();
 });
 

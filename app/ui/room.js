@@ -11,7 +11,7 @@ let updateStatus = false;
 let idRoomToUpdate = "";
 
 function deleteRoom(id) {
-  const response = confirm("are you sure you want to delete it?");
+  const response = confirm("Do you want to delete it?");
   if (response) {
     ipcRenderer.send("delete-room", id);
   }
@@ -53,10 +53,10 @@ function renderRooms(rooms) {
         <td style="width:100px; display:inline-block; overflow:hidden">${t.categoty}</td>
         <td style="width:150px; display:inline-block; overflow:hidden">${t.type}</td>
         <td style="width:160px; display:inline-block; overflow:hidden">
-        <button class="btn btn-btn btn-outline-success" onclick="editRoom('${t._id}')">
+        <button class="btn btn-btn text-light font-weight-medium bg-success" onclick="editRoom('${t._id}')">
        Edit
       </button>
-        <button class="btn btn-btn btn-outline-danger" onclick="deleteRoom('${t._id}')">
+        <button class="btn btn-btn text-light font-weight-medium bg-danger" onclick="deleteRoom('${t._id}')">
         Delete
       </button>
     </td>
@@ -117,7 +117,7 @@ ipcRenderer.on("new-room-created", (e, arg) => {
   rooms.push(roomSaved);
   console.log(rooms);
   renderRooms(rooms);
-  alert("Room Inserted Successfully");
+  alert("Record added successfully");
   building.focus();
 });
 

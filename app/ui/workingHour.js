@@ -9,7 +9,7 @@ let updateStatus = false;
 let idWorkingHToUpdate = "";
 
 function deleteWorkingH(id) {
-  const response = confirm("are you sure you want to delete it?");
+  const response = confirm("Do you want to delete it?");
   if (response) {
     ipcRenderer.send("delete-workingH", id);
   }
@@ -40,11 +40,11 @@ function renderWorkingHs(workingHs) {
         <tr>
           <td>${t.hours}</td>
           <td>${t.minitues}</td>
-          <td><button class="btn btn-danger" onclick="deleteWorkingH('${t._id}')">
-          🗑 Delete
+          <td><button class="btn text-light font-weight-medium bg-danger" onclick="deleteWorkingH('${t._id}')">
+           Delete
         </button></td>
-          <td><button class="btn btn-secondary" onclick="editWorkingH('${t._id}')">
-          ✎ Edit
+          <td><button class="btn text-light font-weight-medium bg-secondary" onclick="editWorkingH('${t._id}')">
+           Edit
         </button></td>
         </tr>
       </tbody>
@@ -84,7 +84,7 @@ ipcRenderer.on("new-workingH-created", (e, arg) => {
   workingHs.push(workingHSaved);
   console.log(workingHs);
   renderWorkingHs(workingHs);
-  alert("Working Hour Created Successfully");
+  alert("Record added successfully");
   hours.focus();
 });
 

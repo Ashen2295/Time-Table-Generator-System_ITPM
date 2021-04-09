@@ -8,7 +8,7 @@ let updateStatus = false;
 let idTagToUpdate = "";
 
 function deleteTag(id) {
-  const response = confirm("are you sure you want to delete it?");
+  const response = confirm("Do you want to delete it?");
   if (response) {
     ipcRenderer.send("delete-tag", id);
   }
@@ -40,10 +40,10 @@ function renderTags(tags) {
       <tr>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.tagSelect}</td>
         <td style="width:200px; display:inline-block; overflow:hidden">
-        <button class="btn btn-btn btn-outline-success" onclick="editTag('${t._id}')">
+        <button class="btn btn-btn text-light font-weight-medium bg-success" onclick="editTag('${t._id}')">
        Edit
       </button>
-        <button class="btn btn-btn btn-outline-danger" onclick="deleteTag('${t._id}')">
+        <button class="btn btn-btn text-light font-weight-medium bg-danger" onclick="deleteTag('${t._id}')">
         Delete
       </button>
     </td>
@@ -83,7 +83,7 @@ ipcRenderer.on("new-tag-created", (e, arg) => {
   tags.push(tagSaved);
   console.log(tags);
   renderTags(tags);
-  alert("Tag Created Successfully");
+  alert("Record added successfully");
   tagName.focus();
 });
 

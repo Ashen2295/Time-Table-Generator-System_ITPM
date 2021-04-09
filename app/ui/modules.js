@@ -19,7 +19,7 @@ let updateStatus = false;
 let idModuleToUpdate = "";
 
 function deleteModule(id) {
-    const response = confirm("are you sure you want to delete it?");
+    const response = confirm("Do you want to delete it?");
     if (response) {
         ipcRenderer.send("delete-module", id);
     }
@@ -45,31 +45,33 @@ function editModule(id) {
 }
 
 function renderModules(modules) {
-    moduleList.innerHTML = "";
+    moduleList.innerHTML =` <table class="table">
+    <thead class="">
+    <tr>
+    <th style="width:210px;display:inline-block; overflow:hidden;" scope="col">Year</th>
+    <th  style="width:210px;display:inline-block; overflow:hidden;" scope="col">Semester</th>
+    <th style="width:210px;display:inline-block; overflow:hidden;" scope="col">Subject</th>
+    </tr>
+    </thead>
+</table>`;
     console.log(modules);
     modules.map((t) => {
         moduleList.innerHTML += `
-        <table class="table table-dark">
-            <thead>
-            <tr>
-            <th scope="col">Year</th>
-            <th scope="col">Sem</th>
-            <th scope="col">Subject</th>
-            </tr>
-        </thead>
+        <table class="table ">
+            
         <tbody>
         <tr>
-          <td>${t.offeredYear}</td>
-          <td>${t.offeredSem}</td>
-          <td>${t.sName}</td>
+          <td style="width:210px;display:inline-block; overflow:hidden;">${t.offeredYear}</td>
+          <td style="width:210px;display:inline-block; overflow:hidden;">${t.offeredSem}</td>
+          <td style="width:210px;display:inline-block; overflow:hidden;">${t.sName}</td>
 
 
-          <td><button class="btn btn-danger" onclick="deleteModule('${t._id}')">
-          🗑 Delete
-        </button></td>
-          <td><button class="btn btn-secondary" onclick="editModule('${t._id}')">
-          ✎ Edit
-        </button></td>
+          <td style=""><button class="btn btn-danger font-weight-medium" onclick="deleteModule('${t._id}')">
+           Delete
+                </button>
+          <button class="btn btn-success font-weight-medium" onclick="editModule('${t._id}')">
+           Edit
+                </button></td>
         </tr>
       </tbody>
         </table>
@@ -191,7 +193,7 @@ ipcRenderer.on("new-module-created", (e, arg) => {
     modules.push(moduleSaved);
     console.log(modules);
     renderModules(modules);
-    alert("Module Created Successfully");
+    alert("Record added successfully");
     offeredYear.focus();
 });
 

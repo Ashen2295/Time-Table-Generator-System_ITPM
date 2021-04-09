@@ -13,7 +13,7 @@ let updateStatus = false;
 let idWorkingdayToUpdate = "";
 
 function deleteWorkingday(id) {
-  const response = confirm("are you sure you want to delete it?");
+  const response = confirm("Do you want to delete it?");
   if (response) {
     ipcRenderer.send("delete-workingday", id);
   }
@@ -50,10 +50,10 @@ function renderWorkingdays(workingdays) {
         <td style="width:100px; display:inline-block; overflow:hidden">${t.day}</td>
 
         <td style="width:200px; display:inline-block; overflow:hidden">
-        <button class="btn btn-btn btn-outline-success" onclick="editWorkingday('${t._id}')">
+        <button class="btn btn-btn text-light font-weight-medium bg-success" onclick="editWorkingday('${t._id}')">
        Edit
       </button>
-        <button class="btn btn-btn btn-outline-danger" onclick="deleteWorkingday('${t._id}')">
+        <button class="btn btn-btn text-light font-weight-medium bg-danger" onclick="deleteWorkingday('${t._id}')">
         Delete
       </button>
     </td>
@@ -98,7 +98,7 @@ ipcRenderer.on("new-workingday-created", (e, arg) => {
   workingdays.push(workingdaySaved);
   console.log(workingdays);
   renderWorkingdays(workingdays);
-  alert("Working Days Inserted Successfully");
+  alert("Record added Successfully");
   workingdayName.focus();
 });
 

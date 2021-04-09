@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://user:123@electronttm.zal8h.mongodb.net/time_table?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://ashen_123:ashen_123@cluster0.2nfmh.mongodb.net/timetable_management_01?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-  .then(db => console.log('DB is up and running'))
+  .then(db => console.log(''))
   .catch(err => console.log(err));

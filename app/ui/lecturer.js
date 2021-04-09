@@ -15,7 +15,7 @@ let updateStatus = false;
 let idLecturerToUpdate = "";
 
 function deleteLecturer(id) {
-  const response = confirm("are you sure you want to delete it?");
+  const response = confirm("Do you want to delete it?");
   if (response) {
     ipcRenderer.send("delete-lecturer", id);
   }
@@ -38,10 +38,10 @@ function editLecturer(id) {
 function renderLecturers(lecturers) {
   lecturerList.innerHTML = `<table class="table table-striped">
   <thead>
-          <tr>
-          <th style="width:100px; display:inline-block; overflow:hidden">LecName</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">dept</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">Building</th>
+          <tr class="w-100">
+          <th style="width:25%; display:inline-block; overflow:hidden">Lecturer Name</th>
+          <th style="width:25%; display:inline-block; overflow:hidden">Department</th>
+          <th style="width:25%; display:inline-block; overflow:hidden">Building</th>
           </tr>
         </thead>
         </table>
@@ -52,14 +52,14 @@ function renderLecturers(lecturers) {
     <table class="table table-striped">
     <tbody>
       <tr>
-        <td style="width:100px; display:inline-block; overflow:hidden">${t.lecName}</td>
-        <td style="width:100px; display:inline-block; overflow:hidden">${t.department}</td>
-        <td style="width:100px; display:inline-block; overflow:hidden">${t.building}</td>
-        <td style="width:200px; display:inline-block; overflow:hidden">
-        <button class="btn btn-btn btn-outline-success" onclick="editLecturer('${t._id}')">
+        <td style="width:25%; display:inline-block; overflow:hidden">${t.lecName}</td>
+        <td style="width:15%; display:inline-block; overflow:hidden; text-align:center;">${t.department}</td>
+        <td style="width:25%; display:inline-block; overflow:hidden">${t.building}</td>
+        <td style="width:25; display:inline-block; overflow:hidden">
+        <button class="btn btn-btn text-light font-weight-bold bg-success" onclick="editLecturer('${t._id}')">
        Edit
     </button>
-        <button class="btn btn-btn btn-outline-danger" onclick="deleteLecturer('${t._id}')">
+        <button class="btn btn-btn text-light font-weight-bold bg-danger" onclick="deleteLecturer('${t._id}')">
         Delete
       </button>
     </td>
@@ -124,7 +124,7 @@ ipcRenderer.on("new-lecturer-created", (e, arg) => {
   lecturers.push(lecturerSaved);
   console.log(lecturers);
   renderLecturers(lecturers);
-  alert("Lecturer Created Successfully");
+  alert("Record added successfully");
   lecName.focus();
 });
 
