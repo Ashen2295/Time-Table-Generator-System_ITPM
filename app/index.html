@@ -1,10 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
-<!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
@@ -15,25 +10,52 @@
 
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
-
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
-
-
     <link rel="stylesheet" href="assets/css/style.css">
-
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <style>
+        p {font-size: 16px;}
+        .margin {margin-bottom: 45px;}
+        .bg-1 {
+          background-color: #1abc9c; /* Green */
+          color: #ffffff;
+        }
+        .bg-2 {
+          background-color: #474e5d; /* Dark Blue */
+          color: #ffffff;
+        }
+        .bg-3 {
+          background-color: #ffffff; /* White */
+          color: #555555;
+        }
+        .bg-4 {
+          background-color: #2f2f2f; /* Black Gray */
+          color: #fff;
+        }
+        .container-fluid {
+          padding-top: 70px;
+          padding-bottom: 70px;
+        }
+        .navbar {
+          /* padding-top: 15px;
+          padding-bottom: 15px; */
+          border: 0;
+          border-radius: 0;
+          margin-bottom: 20px;
+        }
+        </style>
 </head>
 
 <body>
-
-
-    <!-- Left Panel -->
 
     <aside id="left-panel" class="left-panel ">
         <nav class="navbar navbar-expand-sm navbar-default">
@@ -48,16 +70,12 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <!-- <li class="active">
-                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
-                    </li> -->
-                    <!-- <li class="main-menu">
+                    <li class="main-menu">
                         <a href="batchDetails.html"   aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-id-badge"></i>Students</a>
-
-                    </li> -->
-                    <!-- <li class="main-menu">
+                    </li>
+                    <li class="main-menu">
                         <a href="bookmarks.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-pin-alt"></i>Tags</a>
-                    </li> -->
+                    </li>
                     <li class="main-menu">
                         <a href="lecturerDetails.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-notepad"></i>Lecturers</a>
 
@@ -65,94 +83,81 @@
                     <li class="main-menu">
                         <a href="subjectDetails.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-book"></i>Subjects</a>
                     </li>
-                    <!-- <li class="main-menu">
+                    <li class="main-menu">
                         <a href="workingDays.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-briefcase"></i>Days & hours</a>
-                    </li> -->
-
-                    <!-- <li class="main-menu">
-                        <a href="1hourSlot.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-timer"></i>Time Slots</a>
-                    </li> -->
-                    <!-- <li class="main-menu">
-                        <a href="room.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Locations</a>
-
-                    </li> -->
-                    <!-- <li class="main-menu">
-                        <a href="generateStatistics.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-bar-chart"></i>Statistics</a>
-                    </li> -->
-                    <!-- <li class="main-menu">
-                        <a href="BusyTime.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Room Allocate</a>
-
                     </li>
 
+                    <li class="main-menu">
+                        <a href="1hourSlot.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-timer"></i>Time Slots</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="room.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Locations</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="generateStatistics.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-bar-chart"></i>Statistics</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="BusyTime.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Room Allocations</a>
+                    </li>
                     <li class="main-menu">
                         <a href="createSessions.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-harddrives"></i>Sessions</a>
                     </li>
                     <li class="main-menu">
-                        <a href="notAvLec.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-harddrives"></i>Invalid Time</a>
+                        <a href="notAvLec.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-harddrives"></i>Invalid Time Slots</a>
                     </li>
-
-
                     <li class="main-menu">
-                        <a href="generateStatistics.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-bar-chart"></i>Charts</a>
+                        <a href="generate.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-share"></i>Generate Timetables</a>
                     </li>
-
-                    <li class="main-menu">
-                        <a href="generate.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-share"></i>Generate</a>
-                    </li> -->
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>
         </nav>
-    </aside><!-- /#left-panel -->
+    </aside>
 
-    <!-- Left Panel -->
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">TimeTable Management System</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Right Panel -->
+  <!-- Second Container -->
+  <div class="container-fluid bg-2 text-center" style="margin-left: 20px">
+    <h3 class="margin">Save time and effort, create an error-free timetable within a short period</h3>
+    <p>ABC Institute timetable management system has been helping schools and colleges of various sizes in scheduling and managing timetables flawlessly. In a single click, automatic timetable management system promotes the paperless environment and simplifies the payroll calculation for admins. </p>
+  </div>
 
-    <div id="right-panel" class="right-panel">
-
-        <!-- Header-->
-        <!-- <header id="header" class="header">
-
-            <div class="header-menu">
-
-                <div class="col-sm-7">
-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    <div class="header-left">
-                        <button class="search-trigger"><i class="fa fa-search"></i></button>
-                        <div class="form-inline">
-                            <form class="search-form">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-
-                </div>
-
-        </header> -->
-        <!-- /header -->
-        <!-- Header-->
-
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>Dashboard</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li class="active">Dashboard</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- Third Container (Grid) -->
+  <div class="container-fluid bg-3 text-center">
+    <h3 class="margin">Features of ABC Institute Timetable Management System</h3><br><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="images/schedule.png" class="img-responsive margin" style="width:20%" alt="Image">
+        <p>Easily schedule and manage the timetable.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/calendar.png" class="img-responsive margin" style="width:20%" alt="Image">
+        <p>Students can check the complete timetable for the week or a specific day activities.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/planning.png" class="img-responsive margin" style="width:20%" alt="Image">
+        <p>Create different class timing sets for different types of periods.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/training.png" class="img-responsive margin" style="width:20%" alt="Image">
+        <p>Effortlessly allocate subject to the teacher.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/notification.png" class="img-responsive margin" style="width:20%" alt="Image">
+        <p>When executing swap, send instant notification to teachers.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="images/presentation.png" class="img-responsive margin" style="width:20%" alt="Image">
+        <p>Easily manage the classroom allocations.</p>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -160,292 +165,18 @@
 
 
 
-        <div class="content mt-3">
-
-            <div class="col-sm-6 col-lg-6">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton1" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="workingDays.html">Go Working Days</a>
-                                    <a class="dropdown-item" href="workingTime.html">Go Working Hours</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="text">
-                            <span>Working Days & Hours</span>
-                        </h4><br/>
-                        <p class="text-light">Allocate the working days and hours related to the different parties</p>
-
-                        <div class="chart-wrapper px-0" style="height:17px;" height="50">
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!--/.col-->
-
-            <div class="col-sm-6 col-lg-6">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton2" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="batchDetails.html">Go Batch Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span>Student Catalog</span>
-                        </h4><br/>
-                        <p class="text-light">Register & study with lectures and get know the time slots and subjects</p>
-
-                        <div class="chart-wrapper px-0" style="height:17px;" height="50">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--/.col-->
-
-            <!-- <div class="col-sm-6 col-lg-6">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton3" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="lecturerDetails.html">Go Lecturer Details</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span>Lecturer Catalog</span>
-                        </h4>
-                        <p class="text-light">Facility to arrange the lectures with different sessions</p>
-
-                    </div>
-
-                    <div class="chart-wrapper px-0" style="height:30px;" height="70">
-                    </div>
-                </div>
-            </div> -->
-            <!--/.col-->
-
-            <div class="col-sm-6 col-lg-6">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton4" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="subjectDetails.html">Go Module Details</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span>Module Components</span>
-                        </h4>
-                        <p class="text-light">Add more to study</p>
-
-                        <div class="chart-wrapper px-3" style="height:30px;" height="70">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-
-
-        <div class="content mt-3">
-
-            <div class="col-sm-6 col-lg-6">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton1" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="bookmarks.html">Go Tag Details</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span>Bookmarks</span>
-                        </h4>
-                        <p class="text-light">Tagging solution to their works</p>
-
-                        <div class="chart-wrapper px-0" style="height:30px;" height="70">
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!--/.col-->
-
-            <div class="col-sm-6 col-lg-6">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton2" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="building.html">Go Building Details</a>
-                                    <a class="dropdown-item" href="room.html">Go Room Details</a>
-                                    <a class="dropdown-item" href="BusyTime.html">Go Room Allocation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span>Locations</span>
-                        </h4>
-                        <p class="text-light">Find and allocate the better place to study</p>
-
-                        <div class="chart-wrapper px-0" style="height:30px;" height="70">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton2" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="generateStatistics.html">Go statistics</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span>Statistics Reviews</span>
-                        </h4>
-                        <p class="text-light">Summarized your own customized categories</p>
-
-                        <div class="chart-wrapper px-0" style="height:30px;" height="70">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- <div class="col-sm-6 col-lg-6">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton2" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="generate.html">Generate Time Tables</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span>Time Table Setup</span>
-                        </h4>
-                        <p class="text-light">Generate your own time table with your own time slots</p>
-
-                        <div class="chart-wrapper px-0" style="height:30px;" height="70">
-                        </div>
-
-                    </div>
-                </div>
-            </div> -->
-
-        <footer>
-            <div class="breadcrumbs">
-                <div class="col-sm-6">
-                    <div class="page-header float-right">
-                        <div class="page-title">
-                            <ol class="breadcrumb text-right">
-                                <li class="active"></li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="page-header float-right">
-                        <!-- <div class="page-title">
-                            <ol class="breadcrumb text-right">
-                                <li class="active">Powered by 2020-JUN-WE-05</li>
-                            </ol>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-
-        </footer>
-
-
-
-    </div><!-- /#right-panel -->
-
-    <!-- Right Panel -->
 
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
     <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
-
-
     <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
     <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/widgets.js"></script>
     <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
     <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
     <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script>
-        (function($) {
-            "use strict";
 
-            jQuery('#vmap').vectorMap({
-                map: 'world_en',
-                backgroundColor: null,
-                color: '#ffffff',
-                hoverOpacity: 0.7,
-                selectedColor: '#1de9b6',
-                enableZoom: true,
-                showTooltip: true,
-                values: sample_data,
-                scaleColors: ['#1de9b6', '#03a9f5'],
-                normalizeFunction: 'polynomial'
-            });
-        })(jQuery);
-    </script>
 
 </body>
 

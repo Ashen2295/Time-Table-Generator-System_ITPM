@@ -1,0 +1,250 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sessions</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html"><h1>ABC Institute</h1></a>
+                <a class="navbar-brand hidden" href="index.html"><img src="images/logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="main-menu">
+                        <a href="batchDetails.html"   aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-id-badge"></i>Students</a>
+
+                    </li>
+                    <li class="main-menu">
+                        <a href="bookmarks.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-pin-alt"></i>Tags</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="lecturerDetails.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-notepad"></i>Lecturers</a>
+
+                    </li>
+                    <li class="main-menu">
+                        <a href="subjectDetails.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-book"></i>Subjects</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="workingDays.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-briefcase"></i>Days & hours</a>
+                    </li>
+
+                    <li class="main-menu">
+                        <a href="1hourSlot.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-timer"></i>Time Slots</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="room.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Locations</a>
+
+                    </li>
+                    <li class="main-menu">
+                        <a href="generateStatistics.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-bar-chart"></i>Statistics</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="BusyTime.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Room Allocations</a>
+
+                    </li>
+
+                    <li class="main-menu">
+                        <a href="createSessions.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-harddrives"></i>Sessions</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="notAvLec.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-harddrives"></i>Invalid Time Slots</a>
+                    </li>
+
+                    <li class="main-menu">
+                        <a href="generate.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-share"></i>Generate Timetables</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </aside>
+
+    <div id="right-panel" class="right-panel">
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Sessions</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+											<div class="col-lg-12 d-flex justify-content-center">
+                                                <div class="card">
+                                                <div class="card-body">
+                                                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" id="pills-home-tab" href="createSessions.html" role="tab" aria-controls="pills-home" aria-selected="false">Sessions</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="pills-home-tab" href="consecutiveSessions.html" role="tab" aria-controls="pills-home" aria-selected="false">Consecutive Session</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="pills-profile-tab" href="parallelSessions.html" role="tab" aria-controls="pills-profile" aria-selected="false">Parallel Session</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="pills-contact-tab" href="notOverlap.html" role="tab" aria-controls="pills-contact" aria-selected="false">Not Overlap Session</a>
+                                                        </li>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                    <div class="card-header" style="background-color: rgba(128,128,128,0.5) !important;">
+                                                        <strong>Sessions</strong>
+                                                    </div>
+                                                    <div class="card-body card-block">
+                                                        <form id="sessionForm" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                                            <div class="row form-group">
+                                                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Lecturer</label></div>
+                                                                <div class="col-12 col-md-6">
+                                                                    <select name="select" id="lecturer" class="form-control" required>
+                                                                        <option value="Mr. Perera AB">Mr. Perera AB</option>
+                                                                        <option value="Prof. Dilshan S">Prof. Dilshan S</option>
+                                                                        <option value="Ass.Lec. Rathnasiri WWA">Ass.Lec. Rathnasiri WWA</option>
+                                                                        <option value="Miss Kalpani">Miss Kalpani</option>
+                                                                        <option value="Mr. Jagath Perera">Mr. Jagath Perera</option>
+                                                                        <option value="Dr. Jayasinghe AV">Dr. Jayasinghe AV</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+															<div class="row form-group">
+                                                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Subject</label></div>
+																<div class="col-12 col-md-6">
+                                                                    <select name="select" id="subject" class="form-control" required>
+                                                                        <option value="PAF">PAF</option>
+                                                                        <option value="DBS">DBS</option>
+                                                                        <option value="ESD">ESD</option>
+                                                                        <option value="ITPM">ITPM</option>
+                                                                        <option value="NDM">NDM</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+															<div class="row form-group">
+                                                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Subject Code</label></div>
+																<div class="col-12 col-md-6">
+                                                                    <select name="select" id="subjectCode" class="form-control" required>
+                                                                        <option value="IT2050">IT2050</option>
+                                                                        <option value="IT3050">IT3050</option>
+                                                                        <option value="IT3030">IT3030</option>
+                                                                        <option value="IT2022">IT2022</option>
+                                                                        <option value="IT3010">IT3010</option>
+                                                                        <option value="IT3040">IT3040</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+															<div class="row form-group">
+                                                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Tags</label></div>
+                                                                    <div class="col-12 col-md-6">
+                                                                        <select name="select" id="tag" class="form-control" required>
+                                                                            <option value="Lecture">Lecture</option>
+                                                                            <option value="Tutorial">Tutorial</option>
+                                                                            <option value="Lab">Lab</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+															<div class="row form-group">
+                                                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Group ID</label></div>
+                                                                <div class="col-12 col-md-6">
+                                                                    <select name="select" id="groupId" class="form-control" required>
+                                                                        <option value="Y1S1">Y1S1</option>
+                                                                        <option value="Y1S2">Y1S2</option>
+                                                                        <option value="Y2S1">Y2S1</option>
+                                                                        <option value="Y2S2">Y2S2</option>
+                                                                        <option value="Y3S1">Y3S1</option>
+                                                                        <option value="Y3S2">Y3S2</option>
+                                                                        <option value="Y4S1">Y4S1</option>
+                                                                        <option value="Y4S2">Y4S2</option>
+                                                                    </select>
+                                                                </div>
+
+                                                            </div>
+															<div class="row form-group">
+                                                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Sub Group ID</label></div>
+                                                                <div class="col-12 col-md-6">
+                                                                    <select name="select" id="subGroupId" class="form-control" required>
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                        <option value="5">5</option>
+                                                                        <option value="6">6</option>
+                                                                        <option value="7">7</option>
+                                                                        <option value="8">8</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+															<div class="row form-group">
+                                                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Student Count</label></div>
+                                                                <div class="col-12 col-md-6"><input type="text" id="studentCount" name="text-input" placeholder="" class="form-control" ></div>
+                                                                <div style="margin-left: 140px; color: red; display: none;" id="myDIV1">
+                                                                    Please insert student count.
+                                                                </div>
+                                                            </div>
+															<div class="row form-group">
+                                                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Duration</label></div>
+                                                                <div class="col-12 col-md-3"><input type="Number" id="durationHour" name="text-input" placeholder="" class="form-control" ><small class="form-text text-muted">Hours</small>
+                                                                 </div>
+                                                                <div class="col-12 col-md-3"><input type="Number" id="durationMinute" name="text-input" placeholder="" class="form-control" ><small class="form-text text-muted">Minutes</small>
+
+                                                                </div>
+                                                                <div style="margin-left: 140px; color: red; display: none;" id="myDIV2">
+                                                                    Please insert duration.
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                                    Submit
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-12 d-flex justify-content-center">
+                                                <ul id="sessionList"></ul>
+                                            </div>
+
+                            <script src="ui/session.js"></script>
+							<script src="vendors/jquery/dist/jquery.min.js"></script>
+                            <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+                            <script src="vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+                            <script src="vendors/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+                            <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+                            <script src="assets/js/main.js"></script>
+</body>
+</html>
