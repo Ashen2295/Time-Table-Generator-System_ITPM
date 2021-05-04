@@ -44,8 +44,8 @@ function renderSessions(sessions) {
           <tr>
           <th style="width:100px; display:inline-block; overflow:hidden">Lecturer</th>
           <th style="width:100px; display:inline-block; overflow:hidden">Subject</th>
-          <th style="width:150px; display:inline-block; overflow:hidden">SubjectCode</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">S-Count</th>
+          <th style="width:150px; display:inline-block; overflow:hidden">Subject-Code</th>
+          <th style="width:180px; display:inline-block; overflow:hidden">Student-Count</th>
 
           </tr>
         </thead>
@@ -63,10 +63,10 @@ function renderSessions(sessions) {
               <td style="width:150px; display:inline-block; overflow:hidden">${t.subject_code}</td>
               <td style="width:100px; display:inline-block; overflow:hidden">${t.student_count}</td>
               <td style="width:250px; display:inline-block; overflow:hidden">
-              <button class="btn btn-btn btn-outline-success" onclick="editSession('${t._id}')">
+              <button class="btn   btn-success text-light" onclick="editSession('${t._id}')">
              Edit
           </button>
-              <button class="btn btn-btn btn-outline-danger" onclick="deleteSession('${t._id}')">
+              <button class="btn   btn-danger text-light" onclick="deleteSession('${t._id}')">
               Delete
             </button>
           </td>

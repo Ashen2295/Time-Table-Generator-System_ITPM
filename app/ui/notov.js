@@ -37,7 +37,7 @@ function renderNotovs(notovs) {
   console.log(notovs);
   notovs.map((t) => {
     notovList.innerHTML += `
-        <table class="table table-dark">
+        <table class="table table-light">
             <thead>
             <tr>
             <th scope="col">Description</th>
@@ -53,11 +53,11 @@ function renderNotovs(notovs) {
       ${t.session_3}
       ${t.session_4}
           ${t.session_5}</td>
-          <td><button class="btn btn-danger" onclick="deleteNotov('${t._id}')">
-          🗑 Delete
+          <td><button class="btn btn-danger text-light" onclick="deleteNotov('${t._id}')">
+           Delete
         </button></td>
-          <td><button class="btn btn-secondary" onclick="editNotov('${t._id}')">
-          ✎ Edit
+          <td><button class="btn btn-success text-light" onclick="editNotov('${t._id}')">
+           Edit
         </button></td>
         </tr>
       </tbody>

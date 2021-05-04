@@ -31,7 +31,7 @@ function renderNotavsgros(notavsgros) {
   notavsgroList.innerHTML =  `<table class="table table-striped">
   <thead>
           <tr>
-          <th style="width:100px; display:inline-block; overflow:hidden">subGrp</th>
+          <th style="width:120px; display:inline-block; overflow:hidden">Sub-Group</th>
           <th style="width:100px; display:inline-block; overflow:hidden">Start</th>
           <th style="width:100px; display:inline-block; overflow:hidden">End</th>
 
@@ -49,10 +49,10 @@ function renderNotavsgros(notavsgros) {
               <td style="width:100px; display:inline-block; overflow:hidden">${t.starting_time_hour}</td>
               <td style="width:100px; display:inline-block; overflow:hidden">${t.ending_time_hour}</td>
               <td style="width:200px; display:inline-block; overflow:hidden">
-              <button class="btn btn-btn btn-outline-success" onclick="editNotavsgro('${t._id}')">
+              <button class="btn btn-btn btn-success" onclick="editNotavsgro('${t._id}')">
              Edit
           </button>
-              <button class="btn btn-btn btn-outline-danger" onclick="deleteNotavsgro('${t._id}')">
+              <button class="btn btn-btn btn-danger" onclick="deleteNotavsgro('${t._id}')">
               Delete
             </button>
           </td>

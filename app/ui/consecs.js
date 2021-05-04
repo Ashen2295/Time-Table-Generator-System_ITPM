@@ -31,7 +31,7 @@ function renderConsecss(consecss) {
   console.log(consecss);
   consecss.map((t) => {
     consecsList.innerHTML += `
-        <table class="table table-dark">
+        <table class="table table-light">
             <thead>
             <tr>
             <th scope="col">Description</th>
@@ -44,11 +44,11 @@ function renderConsecss(consecss) {
           <td>${t.description}</td>
           <td>${t.first_session}</td>
           <td>${t.second_session}</td>
-          <td><button class="btn btn-danger" onclick="deleteConsecs('${t._id}')">
-          🗑 Delete
+          <td><button class="btn btn-danger text-light" onclick="deleteConsecs('${t._id}')">
+           Delete
         </button></td>
-          <td><button class="btn btn-secondary" onclick="editConsecs('${t._id}')">
-          ✎ Edit
+          <td><button class="btn btn-success text-light" onclick="editConsecs('${t._id}')">
+           Edit
         </button></td>
         </tr>
       </tbody>

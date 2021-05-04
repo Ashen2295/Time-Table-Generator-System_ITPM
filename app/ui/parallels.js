@@ -37,7 +37,7 @@ function renderParallelss(parallelss) {
   console.log(parallelss);
   parallelss.map((t) => {
     parallelsList.innerHTML += `
-        <table class="table table-dark">
+        <table class="table table-light">
             <thead>
             <tr>
             <th scope="col">Description</th>
@@ -53,11 +53,11 @@ function renderParallelss(parallelss) {
         ${t.session_3}
         ${t.session_4}
             ${t.session_5}</td>
-          <td><button class="btn btn-danger" onclick="deleteParallels('${t._id}')">
-          🗑 Delete
+          <td><button class="btn btn-danger text-light" onclick="deleteParallels('${t._id}')">
+           Delete
         </button></td>
-          <td><button class="btn btn-secondary" onclick="editParallels('${t._id}')">
-          ✎ Edit
+          <td><button class="btn btn-success" onclick="editParallels('${t._id}')">
+           Edit
         </button></td>
         </tr>
       </tbody>

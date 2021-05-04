@@ -49,10 +49,10 @@ function renderNotavlecs(notavlecs) {
               <td style="width:100px; display:inline-block; overflow:hidden">${t.starting_time_hour}</td>
               <td style="width:100px; display:inline-block; overflow:hidden">${t.ending_time_hour}</td>
               <td style="width:250px; display:inline-block; overflow:hidden">
-              <button class="btn btn-btn btn-outline-success" onclick="editNotavlec('${t._id}')">
+              <button class="btn btn-btn btn-success" onclick="editNotavlec('${t._id}')">
              Edit
           </button>
-              <button class="btn btn-btn btn-outline-danger" onclick="deleteNotavlec('${t._id}')">
+              <button class="btn btn-btn btn-danger" onclick="deleteNotavlec('${t._id}')">
               Delete
             </button>
           </td>

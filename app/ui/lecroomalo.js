@@ -44,10 +44,10 @@ function renderLecroomalos(lecroomalos) {
         <td style="width:100px; display:inline-block; overflow:hidden">${t.room}</td>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.lecturer}</td>
         <td style="width:200px; display:inline-block; overflow:hidden">
-        <button class="btn btn-btn btn-outline-success" onclick="editLecroomalo('${t._id}')">
+        <button class="btn btn-btn btn-success" onclick="editLecroomalo('${t._id}')">
        Edit
       </button>
-        <button class="btn btn-btn btn-outline-danger" onclick="deleteLecroomalo('${t._id}')">
+        <button class="btn btn-btn btn-danger" onclick="deleteLecroomalo('${t._id}')">
         Delete
       </button>
     </td>

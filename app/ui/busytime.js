@@ -34,8 +34,8 @@ function renderBusytimes(busytimes) {
           <tr>
           <th style="width:70px; display:inline-block; overflow:hidden">Room</th>
           <th style="width:80px; display:inline-block; overflow:hidden">Date</th>
-          <th style="width:110px; display:inline-block; overflow:hidden">STime</th>
-          <th style="width:150px; display:inline-block; overflow:hidden">ETime</th>
+          <th style="width:110px; display:inline-block; overflow:hidden">Start Time</th>
+          <th style="width:150px; display:inline-block; overflow:hidden">End Time</th>
           </tr>
         </thead>
         </table>
@@ -51,10 +51,10 @@ function renderBusytimes(busytimes) {
         <td style="width:110px; display:inline-block; overflow:hidden">${t.starting_time}</td>
         <td style="width:110px; display:inline-block; overflow:hidden">${t.ending_time}</td>
         <td style="width:300px; display:inline-block; overflow:hidden">
-        <button class="btn btn-btn btn-outline-success" onclick="editBusytime('${t._id}')">
+        <button class="btn btn-btn btn-success" onclick="editBusytime('${t._id}')">
        Edit
       </button>
-        <button class="btn btn-btn btn-outline-danger" onclick="deleteBusytime('${t._id}')">
+        <button class="btn btn-btn btn-danger" onclick="deleteBusytime('${t._id}')">
         Delete
       </button>
     </td>

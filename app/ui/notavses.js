@@ -48,10 +48,10 @@ function renderNotavsess(notavsess) {
               <td style="width:100px; display:inline-block; overflow:hidden">${t.starting_time_hour}</td>
               <td style="width:100px; display:inline-block; overflow:hidden">${t.ending_time_hour}</td>
               <td style="width:250px; display:inline-block; overflow:hidden">
-              <button class="btn btn-btn btn-outline-success" onclick="editNotavses('${t._id}')">
+              <button class="btn btn-btn btn-success" onclick="editNotavses('${t._id}')">
              Edit
           </button>
-              <button class="btn btn-btn btn-outline-danger" onclick="deleteNotavses('${t._id}')">
+              <button class="btn btn-btn btn-danger" onclick="deleteNotavses('${t._id}')">
               Delete
             </button>
           </td>

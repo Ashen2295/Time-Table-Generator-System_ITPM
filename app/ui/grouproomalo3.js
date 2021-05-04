@@ -43,10 +43,10 @@ function renderGrouproomalo3s(grouproomalo3s) {
         <td style="width:100px; display:inline-block; overflow:hidden">${t.group3}</td>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.room3}</td>
         <td style="width:200px; display:inline-block; overflow:hidden">
-        <button class="btn btn-btn btn-outline-success" onclick="editGrouproomalo3('${t._id}')">
+        <button class="btn btn-btn btn-success" onclick="editGrouproomalo3('${t._id}')">
        Edit
       </button>
-        <button class="btn btn-btn btn-outline-danger" onclick="deleteGrouproomalo3('${t._id}')">
+        <button class="btn btn-btn btn-danger" onclick="deleteGrouproomalo3('${t._id}')">
         Delete
       </button>
     </td>
