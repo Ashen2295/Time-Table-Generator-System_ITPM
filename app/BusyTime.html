@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Room Allocations</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html"><h1>ABC Institute</h1></a>
+                <a class="navbar-brand hidden" href="index.html"><img src="images/logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="main-menu">
+                        <a href="batchDetails.html"   aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-id-badge"></i>Students</a>
+
+                    </li>
+                    <li class="main-menu">
+                        <a href="bookmarks.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-pin-alt"></i>Tags</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="lecturerDetails.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-notepad"></i>Lecturers</a>
+
+                    </li>
+                    <li class="main-menu">
+                        <a href="subjectDetails.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-book"></i>Subjects</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="workingDays.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-briefcase"></i>Days & hours</a>
+                    </li>
+
+                    <li class="main-menu">
+                        <a href="1hourSlot.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-timer"></i>Time Slots</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="room.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Locations</a>
+
+                    </li>
+                    <li class="main-menu">
+                        <a href="generateStatistics.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-bar-chart"></i>Statistics</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="BusyTime.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Room Allocations</a>
+
+                    </li>
+
+                    <li class="main-menu">
+                        <a href="createSessions.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-harddrives"></i>Sessions</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="notAvLec.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-harddrives"></i>Invalid Time Slots</a>
+                    </li>
+
+                    <li class="main-menu">
+                        <a href="generate.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-share"></i>Generate Timetables</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </aside>
+
+
+<div id="right-panel" class="right-panel">
+
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Room Allocation for Busy Time Slots</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                            <div class="col-lg-12 d-flex justify-content-center">
+                                                <div class="card">
+
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link active" id="pills-home-tab" href="BusyTime.html" role="tab" aria-controls="pills-home" aria-selected="false">Busy Time</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" id="pills-profile-tab" href="lecRoomAlo.html" role="tab" aria-controls="pills-profile" aria-selected="false">Lecturer</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" id="pills-contact-tab" href="groupRoomAlo.html" role="tab" aria-controls="pills-contact" aria-selected="false">Groups</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" id="pills-contact-tab" href="sessionRoomAlo.html" role="tab" aria-controls="pills-contact" aria-selected="false">Sessions</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" id="pills-contact-tab" href="consecRoomAlo.html" role="tab" aria-controls="pills-contact" aria-selected="true">Consecutive</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div class="card-header" style="background-color: rgba(128,128,128,0.5) !important;">
+                                                        <strong>Room Allocation for Busy Time Slots</strong>
+                                                    </div>
+                                                    <div class="card-body card-block">
+                                                        <form id="busytimeForm" method="post" enctype="multipart/form-data" class="form-horizontal">
+															<div class="row form-group">
+                                                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Room</label></div>
+                                                                    <div class="col-12 col-md-9">
+                                                                        <select name="select" id="room" class="form-control" required>
+                                                                            <option value="A406">A406</option>
+                                                                            <option value="N502">N502</option>
+                                                                            <option value="A402">A402</option>
+                                                                            <option value="A512">A512</option>
+                                                                            <option value="N3B">N3B</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+																<div class="row form-group">
+                                                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Date</label></div>
+                                                                    <div class="col-12 col-md-9">
+                                                                        <input type="date" id="date" name="text-input" placeholder="" class="form-control">
+                                                                    </div>
+                                                                    <div style="margin-left: 140px; color: red; display: none;" id="myDIV1">
+                                                                        Please insert the date.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Starting Time</label></div>
+                                                                    <div class="col-12 col-md-6"><input type="time" id="startingTime" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted" >Starting Time</small></div>
+
+                                                                    <div style="margin-left: 140px; color: red; display: none;" id="myDIV2">
+                                                                        Please insert starting time.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Ending Time</label></div>
+                                                                    <div class="col-12 col-md-6"><input type="time" id="endingTime" name="text-input" placeholder="" class="form-control"><small class="form-text text-muted" >Ending Time</small></div>
+                                                                    <div style="margin-left: 140px; color: red; display: none;" id="myDIV3">
+                                                                        Please insert ending time.
+                                                                    </div>
+                                                                </div>
+
+                                                            <div class="card-footer">
+                                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                                     Submit
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-12 d-flex justify-content-center">
+                                                <ul id="busytimeList"></ul>
+                                            </div>
+
+                            <script src="ui/busytime.js"></script>
+							<script src="vendors/jquery/dist/jquery.min.js"></script>
+                            <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+                            <script src="vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+                            <script src="vendors/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+                            <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+                            <script src="assets/js/main.js"></script>
+</body>
+</html>
